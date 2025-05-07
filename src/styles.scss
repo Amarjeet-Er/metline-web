@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import 'aos/dist/aos.css';
+
+
+/* Optional: Use Material typography */
+* {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #596876;
+    --secondary-color: #ffc107;
+}
+
+.cdk-overlay-pane {
+    margin: 15px 0;
+}

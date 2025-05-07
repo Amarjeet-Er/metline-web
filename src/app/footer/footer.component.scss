@@ -1,0 +1,18 @@
+.footer {
+  background-color: var(--primary-color);
+
+  .color-custom {
+    color: #c5bfbf !important;
+  }
+
+  a {
+    color: #c5bfbf !important;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      color: var(--secondary-color) !important;
+      transform: translateX(2px);
+    }
+  }
+}

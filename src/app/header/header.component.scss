@@ -1,0 +1,153 @@
+.main-toolbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu_links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .drop-downs {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 0;
+      }
+
+      .drop-down-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #f9f9f9;
+        display: none;
+        padding: 10px 0;
+        min-width: 150px;
+        border-radius: 4px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.3s ease-in-out;
+        z-index: 1000;
+
+        ul {
+          padding: 0;
+          margin: 0;
+
+          li {
+            list-style: none;
+            padding: 1px 20px;
+            color: #333;
+            cursor: pointer;
+            border-bottom: 1px solid gray;
+            font-size: 13px;
+
+            &:hover {
+              background-color: var(--primary-color);
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      &:hover .drop-down-menu {
+        display: block;
+        padding: 0;
+      }
+    }
+  }
+
+  .mobile_navigation {
+    display: none;
+    cursor: pointer;
+
+    mat-icon {
+      font-size: 28px;
+      color: #fff;
+    }
+  }
+}
+
+.mobile_menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 80px;
+  left: 0;
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 15px 20px;
+      border-bottom: 1px solid #ccc;
+      font-size: 16px;
+
+      .sub-menu {
+        display: none;
+        padding-left: 20px;
+        background: #f5f5f5;
+
+        li {
+          padding: 10px 0;
+        }
+      }
+
+      &:hover .sub-menu {
+        display: block;
+      }
+    }
+  }
+
+  &.open {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-toolbar {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .menu_links {
+    display: none !important;
+  }
+
+  .mobile_navigation {
+    display: flex !important;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

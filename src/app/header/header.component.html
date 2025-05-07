@@ -1,0 +1,90 @@
+<mat-toolbar class="main-toolbar">
+  <!-- Logo Left -->
+  <div class="logo">
+    <img src="../../assets/img/logo.png" alt="logo" width="150" />
+  </div>
+
+  <!-- Desktop Menu Right -->
+  <div class="menu_links">
+    <div class="drop-downs" routerLink="/home">
+      <span>Home</span>
+    </div>
+
+    <div class="drop-downs">
+      <span>About Us</span>
+      <div class="drop-down-menu">
+        <ul>
+          <li (click)="industryOverview()">Industry Overview</li>
+          <li (click)="companyProfile()">Company Profile</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="drop-downs">
+      <span>Products</span>
+      <div class="drop-down-menu">
+        <ul>
+          <li (click)="bowls()">Bowls</li>
+          <li (click)="traysAndPens()">Trays & Pans</li>
+          <li (click)="storage()">Storage</li>
+          <li (click)="petAccessories()">Pet Accessories</li>
+          <li (click)="cutlery()">Cutlery</li>
+          <li (click)="servingTools()">Serving Tools</li>
+          <li (click)="tongs()">Tongs</li>
+          <li (click)="cruets()">Cruets</li>
+          <li (click)="colandersAndStrainers()">Colanders & Strainers</li>
+          <li (click)="fruitAndBreadBaskets()">Fruit & Bread Baskets</li>
+          <li (click)="binsAndBuckets()">Bins & Buckets</li>
+          <li (click)="barAssortments()">Bar Assortments</li>
+          <li (click)="kitchenTool()">Kitchen Tool</li>
+          <li (click)="saladServers()">Salad Servers</li>
+          <li (click)="utilities()">Utilities</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="drop-downs" routerLink="/contact">
+      <span>Contact</span>
+    </div>
+  </div>
+
+  <!-- Mobile Icon Right -->
+  <div class="mobile_navigation">
+    <mat-icon (click)="toggleMobileMenu()">menu</mat-icon>
+  </div>
+</mat-toolbar>
+
+<!-- Mobile Menu Panel -->
+<div class="mobile_menu" [class.open]="isMobileMenuOpen">
+  <ul>
+    <li>Home</li>
+    <li>
+      About Us
+      <ul class="sub-menu">
+        <li (click)="industryOverview()">Industry Overview</li>
+        <li (click)="companyProfile()">Company Profile</li>
+      </ul>
+    </li>
+    <li>
+      Products
+      <ul class="sub-menu">
+        <li (click)="bowls()">Bowls</li>
+        <li (click)="traysAndPens()">Trays & Pans</li>
+        <li (click)="storage()">Storage</li>
+        <li (click)="petAccessories()">Pet Accessories</li>
+        <li (click)="cutlery()">Cutlery</li>
+        <li (click)="servingTools()">Serving Tools</li>
+        <li (click)="tongs()">Tongs</li>
+        <li (click)="cruets()">Cruets</li>
+        <li (click)="colandersAndStrainers()">Colanders & Strainers</li>
+        <li (click)="fruitAndBreadBaskets()">Fruit & Bread Baskets</li>
+        <li (click)="binsAndBuckets()">Bins & Buckets</li>
+        <li (click)="barAssortments()">Bar Assortments</li>
+        <li (click)="kitchenTool()">Kitchen Tool</li>
+        <li (click)="saladServers()">Salad Servers</li>
+        <li (click)="utilities()">Utilities</li>
+      </ul>
+    </li>
+    <li>Contact</li>
+  </ul>
+</div>
