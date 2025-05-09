@@ -11,13 +11,9 @@
   <div class="container">
     <div class="row align-items-center justify-content-center gy-4" style="gap: 60px;">
 
-      <!-- Image Section -->
-      <div class="col-lg-5" data-aos="fade-right">
-        <img src="../../assets/img/about.png" alt="About Us" class="img-fluid rounded shadow">
-      </div>
 
       <!-- Text Content -->
-      <div class="col-lg-6" data-aos="fade-left">
+      <div class="col-lg-6" data-aos="fade-right">
         <h2 class="fw-bold text-primary mb-4">About Us</h2>
         <p class="mb-3">
           We are a leading manufacturer and exporter of Stainless Steel Houseware, including utensils, cutlery,
@@ -30,6 +26,12 @@
           a strong global presence across the EU, USA, UK, South America, Japan, and beyond.
         </p>
         <a href="#" class="btn btn-primary">View More</a>
+      </div>
+
+      
+      <!-- Image Section -->
+      <div class="col-lg-5" data-aos="fade-left">
+        <img src="../../assets/img/about.png" alt="About Us" class="img-fluid rounded shadow">
       </div>
 
     </div>
@@ -129,45 +131,70 @@
 <!-- Products End -->
 
 
+<!-- why choose Start -->
+<section class="about-section py-5 bg-light" aria-label="Why choose our company">
+  <div class="container">
+    <div class="row align-items-center justify-content-center gy-4" style="gap: 60px;">
+
+      <!-- Image Section -->
+      <div class="col-lg-5" data-aos="fade-right">
+        <img src="../../assets/img/about.png" alt="Why Choose Us" class="img-fluid rounded shadow" loading="lazy">
+      </div>
+
+      <!-- Text Content -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2 class="fw-bold text-primary mb-4">Why Choose Us</h2>
+        <p class="mb-3">
+          We are a trusted manufacturer and exporter of high-quality stainless steel houseware products, including
+          utensils, cutlery, kitchenware, and other household items. Our manufacturing facility is strategically
+          located in the Kundli Industrial Area near Delhi, enabling efficient logistics and timely delivery to
+          both domestic and international markets.
+        </p>
+        <p class="mb-3">
+          With years of industry experience and an in-depth understanding of global standards, we offer over 200
+          customizable products in a variety of shapes such as round, oval, square, and more. Our in-house
+          manufacturing process covers every stage — from sheet cutting and shaping to polishing, packing, and
+          final inspection — ensuring consistent quality and cost control.
+        </p>
+        <p class="mb-4">
+          Our commitment to innovation, durability, and customer satisfaction has helped us build a strong global
+          presence across Europe, the United States, the United Kingdom, South America, Japan, and other
+          international markets. We also take pride in our skilled workforce, advanced equipment, and flexible
+          production capacity, which enable us to handle both bulk orders and custom specifications efficiently.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- why choose End -->
 
 
-<!-- Why Choose Us Start -->
-<div class="container py-5">
-  <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
-    <span class="pr-3">Why Choose Us</span>
+
+<div class="container">
+  <h2 class="custom-heading mx-xl-5 mb-4">
+    <span>Our Team</span>
   </h2>
-  <div class="row px-xl-5">
-
-    <!-- Quality -->
-    <div class="col-md-4 mb-4">
-      <h5 class="color-custom text-uppercase mb-3">Product Quality</h5>
-      <div class="d-flex flex-column justify-content-start">
-        <span class="color-custom mb-2"><i class="fa fa-check-circle mr-2 text-primary"></i>&nbsp;Premium stainless steel</span>
-        <span class="color-custom mb-2"><i class="fa fa-check-circle mr-2 text-primary"></i>&nbsp;Food-grade certified</span>
-        <span class="color-custom"><i class="fa fa-check-circle mr-2 text-primary"></i>&nbsp;Rust & corrosion resistant</span>
+  <div class="row justify-content-center">
+    <div class="col-md-3 mb-5" *ngFor="let item of [1,2,3,4]">
+      <div class="card shadow-lg profile-card">
+        <!-- Profile Image -->
+        <img src="../../assets/img/about.png" alt="Team Member" class="card-img-top rounded-circle mx-auto mt-4" style="width: 150px; height: 150px; object-fit: cover;">
+        
+        <!-- Card Body -->
+        <div class="card-body text-center">
+          <h5 class="card-title text-primary">John Doe</h5>
+          <p class="card-text text-muted">Frontend Developer</p>
+          
+          <!-- Social Media Icons (Initially hidden, shown on hover) -->
+          <div class="social-icons mt-3">
+            <a href="https://facebook.com" target="_blank" class="text-primary mx-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" class="text-info mx-2"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="text-primary mx-2"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank" class="text-danger mx-2"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Innovation -->
-    <div class="col-md-4 mb-4">
-      <h5 class="color-custom text-uppercase mb-3">Innovation & Design</h5>
-      <div class="d-flex flex-column justify-content-start">
-        <span class="color-custom mb-2"><i class="fa fa-lightbulb mr-2 text-primary"></i>&nbsp;Modern ergonomic styles</span>
-        <span class="color-custom mb-2"><i class="fa fa-lightbulb mr-2 text-primary"></i>&nbsp;Customer-driven R&D</span>
-        <span class="color-custom"><i class="fa fa-lightbulb mr-2 text-primary"></i>&nbsp;Smart storage solutions</span>
-      </div>
-    </div>
-
-    <!-- Trust -->
-    <div class="col-md-4 mb-4">
-      <h5 class="color-custom text-uppercase mb-3">Trust & Support</h5>
-      <div class="d-flex flex-column justify-content-start">
-        <span class="color-custom mb-2"><i class="fa fa-thumbs-up mr-2 text-primary"></i>&nbsp;20+ years of expertise</span>
-        <span class="color-custom mb-2"><i class="fa fa-thumbs-up mr-2 text-primary"></i>&nbsp;Serving 50+ countries</span>
-        <span class="color-custom"><i class="fa fa-thumbs-up mr-2 text-primary"></i>&nbsp;Responsive support team</span>
-      </div>
-    </div>
-
   </div>
 </div>
-<!-- Why Choose Us End -->
