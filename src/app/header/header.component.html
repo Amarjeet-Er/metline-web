@@ -57,7 +57,7 @@
 <!-- Mobile Menu Panel -->
 <div class="mobile_menu" [class.open]="isMobileMenuOpen">
   <ul>
-    <li>Home</li>
+    <li routerLink="/home">Home</li>
     <li>
       About Us
       <ul class="sub-menu">
@@ -85,6 +85,6 @@
         <li (click)="utilities()">Utilities</li>
       </ul>
     </li>
-    <li>Contact</li>
+    <li routerLink="/contact">Contact</li>
   </ul>
 </div>
