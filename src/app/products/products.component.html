@@ -1,11 +1,37 @@
 <!-- Bowls Start -->
 <div class="container-fluid pt-5 pb-3" *ngIf="bowls()">
-  <h2 class="section-heading mx-xl-5 mb-4">
-  <i class="fas fa-bowl-food icon-left"></i>
-  <span>Bowls</span>
-</h2>
+    <h2 class="section-heading mx-xl-5 mb-4">
+        <i class="fas fa-bowl-food icon-left"></i>
+        <span>Bowls</span>
+    </h2>
 
-      
+    <div class="row px-xl-5">
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12]">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100 zoom-image" src="../../assets/img/about.png" alt="Bowls">
+                    <div class="product-action">
+                        <a class="btn btn-outline-dark" href="#"><i class="fas fa-search-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center py-4">
+                    <p class="p-0 m-0 text-primary">MB 00265</p>
+                    <a class="h6 text-decoration-none text-truncate" href="#">Bowls</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bowls End -->
+
+<!-- Bowls Start -->
+<div class="container-fluid pt-5 pb-3" *ngIf="traysAndPens()">
+    <h2 class="section-heading mx-xl-5 mb-4">
+        <i class="fas fa-bowl-food icon-left"></i>
+        <span> Trays And Pens</span>
+    </h2>
+
     <div class="row px-xl-5">
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12]">
             <div class="product-item bg-light mb-4">
@@ -30,7 +56,6 @@
 
 
 
-<p *ngIf="traysAndPens()"> traysAndPens</p>
 
 <p *ngIf="storage()"> storage</p>
 
