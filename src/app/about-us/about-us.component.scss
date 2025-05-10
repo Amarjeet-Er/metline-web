@@ -1,0 +1,37 @@
+.custom-heading {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.custom-heading span {
+    padding-right: 1rem;
+    white-space: nowrap;
+}
+
+.custom-heading::after {
+    content: "";
+    flex-grow: 1;
+    border-bottom: 2px dotted #999;
+    margin-left: 1rem;
+}
+
+
+/* Custom header styles */
+.section-header {
+    font-weight: bold;  /* Make the header bold */
+    font-size: 1.25rem; /* Increase the font size */
+    color: #007bff;     /* Change the color to blue (or any color you prefer) */
+}
+
+/* Optional: Add more styling for the border and the grid layout */
+.border-start {
+    border-left: 3px solid #007bff; /* Change the border color to match header */
+}
+
+.row {
+    margin-bottom: 20px;  /* Adds space between rows */
+}

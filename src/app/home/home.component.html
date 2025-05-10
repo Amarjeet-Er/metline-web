@@ -25,10 +25,10 @@
           production steps in-house — from sheet cutting to packaging. Our skilled workforce helps us maintain
           a strong global presence across the EU, USA, UK, South America, Japan, and beyond.
         </p>
-        <a href="#" class="btn btn-primary">View More</a>
+        <a href="#" class="btn btn-primary" routerLink="/company-profile">View More</a>
       </div>
 
-      
+
       <!-- Image Section -->
       <div class="col-lg-5" data-aos="fade-left">
         <img src="../../assets/img/about.png" alt="About Us" class="img-fluid rounded shadow">
@@ -53,7 +53,8 @@
         <p class="text-muted small mb-3">
           Metline Houseware has contributed significantly to India’s stainless steel export industry...
         </p>
-        <a href="#" class="text-primary small fw-semibold text-decoration-none">Read More &rsaquo;</a>
+        <a href="#" class="text-primary small fw-semibold text-decoration-none" routerLink="/company-profile">Read More
+          &rsaquo;</a>
       </div>
     </div>
 
@@ -67,7 +68,8 @@
         <p class="text-muted small mb-3">
           Capable of producing large quantities & welcoming bulk orders from exporters across India...
         </p>
-        <a href="#" class="text-primary small fw-semibold text-decoration-none">Read More &rsaquo;</a>
+        <a href="#" class="text-primary small fw-semibold text-decoration-none" routerLink="/company-profile">Read More
+          &rsaquo;</a>
       </div>
     </div>
 
@@ -81,7 +83,8 @@
         <p class="text-muted small mb-3">
           We actively participate in tenders and supply to govt. with world-class merchandising experience...
         </p>
-        <a href="#" class="text-primary small fw-semibold text-decoration-none">Read More &rsaquo;</a>
+        <a href="#" class="text-primary small fw-semibold text-decoration-none" routerLink="/company-profile">Read More
+          &rsaquo;</a>
       </div>
     </div>
 
@@ -95,7 +98,8 @@
         <p class="text-muted small mb-3">
           Adapting to consumption cultures, we maintain focus and produce cost-effective products...
         </p>
-        <a href="#" class="text-primary small fw-semibold text-decoration-none">Read More &rsaquo;</a>
+        <a href="#" class="text-primary small fw-semibold text-decoration-none" routerLink="/company-profile">Read More
+          &rsaquo;</a>
       </div>
     </div>
 
@@ -179,22 +183,68 @@
     <div class="col-md-3 mb-5" *ngFor="let item of [1,2,3,4]">
       <div class="card shadow-lg profile-card">
         <!-- Profile Image -->
-        <img src="../../assets/img/about.png" alt="Team Member" class="card-img-top rounded-circle mx-auto mt-4" style="width: 150px; height: 150px; object-fit: cover;">
-        
+        <img src="../../assets/img/about.png" alt="Team Member" class="card-img-top rounded-circle mx-auto mt-4"
+          style="width: 150px; height: 150px; object-fit: cover;">
+
         <!-- Card Body -->
         <div class="card-body text-center">
           <h5 class="card-title text-primary">John Doe</h5>
           <p class="card-text text-muted">Frontend Developer</p>
-          
+
           <!-- Social Media Icons (Initially hidden, shown on hover) -->
           <div class="social-icons mt-3">
-            <a href="https://facebook.com" target="_blank" class="text-primary mx-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://facebook.com" target="_blank" class="text-primary mx-2"><i
+                class="fab fa-facebook-f"></i></a>
             <a href="https://twitter.com" target="_blank" class="text-info mx-2"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="text-primary mx-2"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://instagram.com" target="_blank" class="text-danger mx-2"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="text-primary mx-2"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank" class="text-danger mx-2"><i
+                class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+
+
+<div id="testimonialCarousel" class="carousel slide container" data-bs-ride="carousel">
+  <h2 class="custom-heading mx-xl-5 mb-4">
+    <span>Our Testimonials </span>
+  </h2>
+  <div class="carousel-inner">
+    <div class="carousel-item" *ngFor="let group of groupedTestimonials; let i = index" [class.active]="i === 0">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let t of group">
+          <div class="card mb-4 shadow-lg border-0">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <img [src]="t.avatar" class="rounded-circle me-3" width="60" height="60" alt="User">
+                <div>
+                  <h5 class="mb-0">{{ t.name }}</h5>
+                  <small class="text-muted">{{ t.role }}</small>
+                </div>
+              </div>
+              <p class="text-muted">“{{ t.message }}”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+    <span aria-hidden="true">
+      <i class="bi bi-chevron-left fs-1 text-dark"></i>
+    </span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+    <span aria-hidden="true">
+      <i class="bi bi-chevron-right fs-1 text-dark"></i>
+    </span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>

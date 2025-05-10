@@ -1,0 +1,28 @@
+/* Styling for the contact page */
+.company-info h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.company-info p {
+  font-size: 1rem;
+  color: #555;
+}
+
+form .form-label {
+  font-weight: bold;
+}
+
+form .form-control {
+  border-radius: 5px;
+}
+
+h3 {
+  color: #333;
+}
+
+/* Google Map */
+iframe {
+  border-radius: 5px;
+}
