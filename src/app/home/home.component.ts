@@ -8,13 +8,12 @@ import * as AOS from 'aos';
 })
 export class HomeComponent {
   @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
-  // Group testimonials by 3 per slide
   groupedTestimonials: any = [];
 
   ngAfterViewInit() {
     const videoEl = this.bgVideo.nativeElement;
-
-    videoEl.muted = true; // Ensure muted for autoplay
+    videoEl.playbackRate = 0.7;
+    videoEl.muted = true;
     videoEl.play().catch(err => {
       console.warn('Autoplay failed:', err);
     });
@@ -54,6 +53,18 @@ export class HomeComponent {
     {
       name: 'Mike Lee',
       role: 'Project Manager',
+      message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
+      avatar: '../../assets/img/about.png'
+    },
+    {
+      name: 'Dinesh Ray',
+      role: 'Manager',
+      message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
+      avatar: '../../assets/img/about.png'
+    },
+    {
+      name: 'Chunchun Pandit',
+      role: 'Dot Net Developer',
       message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
       avatar: '../../assets/img/about.png'
     }

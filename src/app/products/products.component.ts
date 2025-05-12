@@ -18,6 +18,9 @@ export class ProductsComponent {
 
 
   // start product
+  categories(): boolean {
+    return this._router.isActive('categories', true);
+  }
   bowls(): boolean {
     return this._router.isActive('bowls', true);
   }

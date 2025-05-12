@@ -1,7 +1,7 @@
 <!-- Background Video -->
 <video #bgVideo autoplay muted loop playsinline preload="auto" width="100%" poster="../../assets/img/fallback.jpg"
   class="w-100 video-animated">
-  <source src="../../assets/img/slide-video.mp4" type="video/mp4" />
+  <source src="../../assets/img/slide-videos.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
 
@@ -48,7 +48,7 @@
   <div class="row g-4">
 
     <!-- Card 1 -->
-    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+    <div class="col-lg-3 col-md-6" data-aos="fade-right">
       <div class="bg-white h-100 p-4 rounded-4 shadow-sm border-0 hover-shadow transition-all">
         <div class="mb-3">
           <i class="fa fa-globe fa-2x text-primary"></i>
@@ -63,7 +63,7 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+    <div class="col-lg-3 col-md-6" data-aos="fade-right">
       <div class="bg-white h-100 p-4 rounded-4 shadow-sm border-0 hover-shadow transition-all">
         <div class="mb-3">
           <i class="fa fa-industry fa-2x text-primary"></i>
@@ -78,7 +78,7 @@
     </div>
 
     <!-- Card 3 -->
-    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+    <div class="col-lg-3 col-md-6" data-aos="fade-left">
       <div class="bg-white h-100 p-4 rounded-4 shadow-sm border-0 hover-shadow transition-all">
         <div class="mb-3">
           <i class="fa fa-handshake fa-2x text-primary"></i>
@@ -93,7 +93,7 @@
     </div>
 
     <!-- Card 4 -->
-    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
+    <div class="col-lg-3 col-md-6" data-aos="fade-left">
       <div class="bg-white h-100 p-4 rounded-4 shadow-sm border-0 hover-shadow transition-all">
         <div class="mb-3">
           <i class="fa fa-store fa-2x text-primary"></i>
@@ -114,11 +114,14 @@
 
 
 
-<!-- Products Start -->
+<!-- categories Start -->
 <div class="container-fluid pt-5 pb-3">
-  <h2 class="custom-heading mx-xl-5 mb-4">
-    <span>Products</span>
-  </h2>
+  <div class="d-flex align-items-center mx-xl-5 mb-4">
+    <h2 class="mb-0 me-3">Categories</h2>
+    <div class="flex-grow-1 border-bottom"></div>
+    <a href="#" class="ms-3 text-primary" routerLink="/categories">View More</a>
+  </div>
+
 
   <div class="row px-xl-5">
     <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let i of [1,2,3,4,5,6,7,8]">
