@@ -16,7 +16,7 @@ export class ContactUsComponent implements OnInit {
   ngOnInit(): void {
     this.enquiry_form = this._fb.group({
       name: ['', Validators.required],
-    email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email]],
       phone: [
         '',
         [
