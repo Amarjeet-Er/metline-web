@@ -16,7 +16,7 @@
 
                 <!-- Contact Persons -->
                 <div class="mt-4">
-                    <h5 class="text-success fw-semibold mb-3">Contact person for Domestic Sales & Purchases</h5>
+                    <h4 class="text-secondary fw-bold mb-3"> Contact person for Domestic Sales & Purchases</h4>
                     <div class="border-start ps-3 mb-4">
                         <h4 class="fw-bold mb-1">Mr. Jitender Jain</h4>
                         <p class="mb-1"><strong>Email : </strong> <a href="mailto:info@globesteel.com"
@@ -24,7 +24,7 @@
                         <p class="mb-0"><strong>Phone : </strong> +91 8459 76 2005</p>
                     </div>
 
-                    <h5 class="text-success fw-semibold mb-3">Contact Person for International Business</h5>
+                    <h4 class="text-secondary fw-bold mb-3">Contact Person for International Business</h4>
 
                     <div class="border-start ps-3 mb-4">
                         <h4 class="fw-bold mb-1">Mr. Amit Basia</h4>
@@ -52,28 +52,60 @@
 
         <!-- Right: Enquiry Form and Google Map -->
         <div class="col-12 col-md-6">
-            <div class="p-4 border rounded-3 shadow-lg bg-white mb-4">
+            <div class="p-4 border rounded-3 shadow-lg bg-light h-100">
                 <h4 class="text-primary fw-bold mb-3">Enquiry Form</h4>
-                <form>
+                <form [formGroup]="enquiry_form" (ngSubmit)="onSubmit()">
                     <div class="mb-3">
                         <label for="name" class="form-label fw-semibold">Your Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required
+                            formControlName="name">
+                        <div *ngIf="enquiry_form.get('name')?.invalid && enquiry_form.get('name')?.touched"
+                            class="text-danger mt-1">
+                            <div *ngIf="enquiry_form.get('name')?.errors?.['required']">Name is required.</div>
+                        </div>
                     </div>
+
                     <div class="mb-3">
                         <label for="email" class="form-label fw-semibold">Your Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required
+                            formControlName="email">
+                        <div *ngIf="enquiry_form.get('email')?.invalid && enquiry_form.get('email')?.touched"
+                            class="text-danger mt-1">
+                            <div *ngIf="enquiry_form.get('email')?.errors?.['required']">Email is required.</div>
+                            <div *ngIf="enquiry_form.get('email')?.errors?.['email']">Please enter a valid email.</div>
+                        </div>
                     </div>
+
                     <div class="mb-3">
-                        <label for="email" class="form-label fw-semibold">Your Phone</label>
-                        <input type="number" class="form-control" id="email" placeholder="Enter your phone" required>
+                        <label for="phone" class="form-label fw-semibold">Your Phone</label>
+                        <input type="number" class="form-control" id="phone" placeholder="Enter your phone" required
+                            formControlName="phone">
+                        <div *ngIf="enquiry_form.get('phone')?.invalid && enquiry_form.get('phone')?.touched"
+                            class="text-danger mt-1">
+                            <div *ngIf="enquiry_form.get('phone')?.errors?.['required']">Phone number is required.</div>
+                            <div *ngIf="enquiry_form.get('phone')?.errors?.['minlength']">Phone number must be 10
+                                digits.</div>
+                            <div *ngIf="enquiry_form.get('phone')?.errors?.['maxlength']">Phone number must be 10
+                                digits.</div>
+                            <div *ngIf="enquiry_form.get('phone')?.errors?.['pattern']">Phone number must be exactly 10
+                                digits.</div>
+                        </div>
                     </div>
+
                     <div class="mb-3">
                         <label for="message" class="form-label fw-semibold">Your Message</label>
-                        <textarea class="form-control" id="message" rows="4" placeholder="Type your message..."
-                            required></textarea>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Type your message..." required
+                            formControlName="message"></textarea>
+                        <div *ngIf="enquiry_form.get('message')?.invalid && enquiry_form.get('message')?.touched"
+                            class="text-danger mt-1">
+                            <div *ngIf="enquiry_form.get('message')?.errors?.['required']">Message is required.</div>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+
+                    <button type="submit" class="btn btn-primary w-100"
+                        [disabled]="enquiry_form.invalid">Submit</button>
                 </form>
+
             </div>
 
 

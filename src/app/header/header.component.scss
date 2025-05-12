@@ -82,6 +82,11 @@
   }
 }
 
+.active-link {
+  border-bottom: 3px solid #da6a0f !important;
+  z-index: 10000 !important;
+}
+
 .mobile_menu {
   display: none;
   position: absolute;

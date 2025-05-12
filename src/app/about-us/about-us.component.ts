@@ -15,7 +15,7 @@ export class AboutUsComponent implements OnInit {
   }
   ngOnInit(): void {
     AOS.init({
-      duration: 2000,
+      duration: 1000,
       once: true
     });
   }

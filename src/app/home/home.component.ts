@@ -8,9 +8,9 @@ import * as AOS from 'aos';
 })
 export class HomeComponent {
   @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
-// Group testimonials by 3 per slide
+  // Group testimonials by 3 per slide
   groupedTestimonials: any = [];
-  
+
   ngAfterViewInit() {
     const videoEl = this.bgVideo.nativeElement;
 
@@ -26,20 +26,37 @@ export class HomeComponent {
       this.groupedTestimonials.push(this.testimonials.slice(i, i + groupSize));
     }
     AOS.init({
-      duration: 2000,
+      duration: 1000,
       once: true
     });
   }
 
 
   testimonials = [
-    { name: 'John Doe', role: 'Engineer', message: 'Awesome!', avatar: '../../assets/img/about.png' },
-    { name: 'Jane Smith', role: 'Designer', message: 'Loved it!', avatar: '../../assets/img/about.png' },
-    { name: 'Mike Lee', role: 'PM', message: 'Very useful.', avatar: '../../assets/img/about.png' },
-    { name: 'Emily Ray', role: 'QA', message: 'Bug-free!', avatar: '../../assets/img/about.png' },
-    { name: 'Chris Green', role: 'CTO', message: 'Superb!', avatar: '../../assets/img/about.png' },
-    { name: 'Sara Kim', role: 'Data Scientist', message: 'Great insights.', avatar: '../../assets/img/about.png' }
-  ];  
-
+    {
+      name: 'John Doe',
+      role: 'Engineer',
+      message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
+      avatar: '../../assets/img/about.png'
+    },
+    {
+      name: 'Sukesh Doe',
+      role: 'Angular Developer',
+      message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
+      avatar: '../../assets/img/about.png'
+    },
+    {
+      name: 'Jane Smith',
+      role: 'Designer',
+      message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
+      avatar: '../../assets/img/about.png'
+    },
+    {
+      name: 'Mike Lee',
+      role: 'Project Manager',
+      message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
+      avatar: '../../assets/img/about.png'
+    }
+  ];
 
 }

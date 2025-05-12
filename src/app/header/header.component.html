@@ -6,16 +6,16 @@
 
   <!-- Desktop Menu Right -->
   <div class="menu_links">
-    <div class="drop-downs" routerLink="/home">
+    <div class="drop-downs" routerLink="/home" routerLinkActive="active-link">
       <span>Home</span>
     </div>
 
-    <div class="drop-downs">
+    <div class="drop-downs" routerLinkActive="active-link">
       <span>About Us</span>
       <div class="drop-down-menu">
         <ul>
-          <li (click)="industryOverview()">Industry Overview</li>
-          <li (click)="companyProfile()">Company Profile</li>
+          <li [routerLink]="'/industry-overview'">Industry Overview</li>
+          <li [routerLink]="'/company-profile'">Company Profile</li>
         </ul>
       </div>
     </div>
@@ -43,7 +43,7 @@
       </div>
     </div>
 
-    <div class="drop-downs" routerLink="/contact">
+    <div class="drop-downs" routerLink="/contact" routerLinkActive="active-link">
       <span>Contact</span>
     </div>
   </div>
