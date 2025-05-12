@@ -1,23 +1,22 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as AOS from 'aos';
+import { CrudService } from '../service/crud.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
   groupedTestimonials: any = [];
 
-  ngAfterViewInit() {
-    const videoEl = this.bgVideo.nativeElement;
-    videoEl.playbackRate = 0.7;
-    videoEl.muted = true;
-    videoEl.play().catch(err => {
-      console.warn('Autoplay failed:', err);
-    });
+  constructor(
+    private _crud: CrudService
+  ) {
+
   }
+
 
   ngOnInit(): void {
     const groupSize = 3;
@@ -27,6 +26,16 @@ export class HomeComponent {
     AOS.init({
       duration: 1000,
       once: true
+    });
+  }
+
+
+  ngAfterViewInit() {
+    const videoEl = this.bgVideo.nativeElement;
+    videoEl.playbackRate = 0.7;
+    videoEl.muted = true;
+    videoEl.play().catch(err => {
+      console.warn('Autoplay failed:', err);
     });
   }
 
