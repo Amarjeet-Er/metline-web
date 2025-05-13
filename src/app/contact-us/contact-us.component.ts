@@ -45,7 +45,7 @@ export class ContactUsComponent implements OnInit {
     this._crud.addEnquiry(formValues).subscribe(
       (response) => {
         this.snackBar.open('Enquiry submitted successfully!', 'Close', {
-          duration: 3000,
+          duration: 4000,
           horizontalPosition: 'right',
           verticalPosition: 'top',
           panelClass: ['snackbar-success']
@@ -54,7 +54,7 @@ export class ContactUsComponent implements OnInit {
       },
       (error) => {
         this.snackBar.open('Failed to submit enquiry. Please try again.', 'Close', {
-          duration: 3000,
+          duration: 4000,
           horizontalPosition: 'right',
           verticalPosition: 'top',
           panelClass: ['snackbar-error']

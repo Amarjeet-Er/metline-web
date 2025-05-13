@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'company-profile', component: AboutUsComponent },
   { path: 'categories', component: ProductsComponent },
   { path: 'product/:id', component: ProductsComponent },
+  { path: 'contact', component: ContactUsComponent },
 ]
 
 @NgModule({
