@@ -1,53 +1,52 @@
-
-
 // product start
 
 
 .product-item {
-    border: 1px solid #d1d1d1;
-    /* Gray border */
-    border-radius: 20px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+  border: 1px solid #d1d1d1;
+  /* Gray border */
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .product-img {
-    position: relative;
-    overflow: hidden;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .zoom-image {
-    transition: transform 0.5s ease;
-    border-radius: 0;
-    /* optional */
+  transition: transform 0.5s ease;
+  border-radius: 0;
+  /* optional */
 }
 
 .product-img:hover .zoom-image {
-    transform: scale(1.1);
-    filter: brightness(0.7) blur(1px);
-    /* glass effect */
+  transform: scale(1.1);
+  filter: brightness(0.7) blur(1px);
+  /* glass effect */
 }
 
 .product-action {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.4s ease;
-    background: rgba(255, 255, 255, 0.2);
-    /* soft glass effect background */
-    backdrop-filter: blur(5px);
-    padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.2);
+  /* soft glass effect background */
+  backdrop-filter: blur(5px);
+  padding: 10px 0;
 }
 
 .product-img:hover .product-action {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
+
 .section-heading {
   display: flex;
   align-items: center;
@@ -56,8 +55,10 @@
   font-weight: 600;
   position: relative;
   padding-bottom: 8px;
-  color: #343a40; /* dark text */
-  border-bottom: 2px solid #e0e0e0; /* subtle underline */
+  color: #343a40;
+  /* dark text */
+  border-bottom: 2px solid #e0e0e0;
+  /* subtle underline */
   transition: all 0.3s ease;
 }
 
@@ -66,7 +67,8 @@
 }
 
 .section-heading .icon-left {
-  color: #ff7043; /* themed accent color */
+  color: #ff7043;
+  /* themed accent color */
   font-size: 1.5rem;
 }
 
@@ -76,3 +78,23 @@
 
 // product end
 
+
+.no-records {
+  background-color: #fdfdfd;
+  border: 1px dashed #ccc;
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.no-records h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.no-records p {
+  font-size: 1rem;
+  color: #6c757d;
+}

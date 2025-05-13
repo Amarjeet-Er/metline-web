@@ -1,0 +1,21 @@
+<div class="dialog-container">
+  <!-- Close Icon -->
+  <button class="close-btn" (click)="closeDialog()" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </button>
+
+  <!-- Image Section -->
+  <div class="image-wrapper">
+    <img [src]="data.imageUrl" class="dialog-image" alt="Product image">
+  </div>
+
+  <!-- Details Section -->
+  <div class="product-details">
+    <h5 class="product-name" *ngIf="data?.productname">{{ data?.productname }}</h5>
+    <div class="product-meta">
+      <p *ngIf="data?.productcode"><strong>Code:</strong> {{ data?.productcode }}</p>
+      <p *ngIf="data?.productsize"><strong>Size:</strong> {{ data?.productsize }}</p>
+    </div>
+    <p class="product-desc" *ngIf="data?.productdesc">{{ data?.productdesc }}</p>
+  </div>
+</div>

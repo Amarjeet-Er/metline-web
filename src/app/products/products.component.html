@@ -1,85 +1,35 @@
-<!-- Bowls Start -->
-<div class="container-fluid pt-5 pb-3" *ngIf="bowls()">
-    <h2 class="section-heading mx-xl-5 mb-4">
+<div class="container-fluid pt-5 pb-3">
+    <h2 class="section-heading mx-xl-5 mb-4" *ngIf="productName">
         <i class="fas fa-bowl-food icon-left"></i>
-        <span>Bowls</span>
+        <span>{{ productName }}</span>
     </h2>
 
-    <div class="row px-xl-5">
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12]">
+    <!-- Products List -->
+    <div class="row px-xl-5" *ngIf="productList?.length > 0; else noProducts">
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let pro of productList">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100 zoom-image" src="../../assets/img/about.png" alt="Bowls">
-                    <div class="product-action">
-                        <a class="btn btn-outline-dark" href="#"><i class="fas fa-search-plus"></i>
-                        </a>
+                    <img class="img-fluid w-100 zoom-image"
+                        [src]="pro?.imageUrl ? imaUrl + pro?.imageUrl : '../../assets/img/about.png'"
+                        [alt]="pro?.categoryname" />
+                    <div class="product-action" (click)="openImageDialog(pro)">
+                        <i class="fas fa-search-plus" style="font-size: 24px;"></i>
                     </div>
                 </div>
                 <div class="text-center py-4">
-                    <p class="p-0 m-0 text-primary">MB 00265</p>
-                    <a class="h6 text-decoration-none text-truncate" href="#">Bowls</a>
+                    <p class="p-0 m-0 text-primary">{{pro?.productcode}}</p>
+                    <a class="h6 text-decoration-none text-truncate" href="#">{{ pro?.productname }}</a>
                 </div>
             </div>
         </div>
     </div>
+
+ <!-- No Records Found -->
+<ng-template #noProducts>
+  <div class="no-records text-center p-5">
+    <h4 class="text-muted mb-2">No products found</h4>
+    <p class="text-secondary">Try selecting a different category.</p>
+  </div>
+</ng-template>
+
 </div>
-<!-- Bowls End -->
-
-<!-- Bowls Start -->
-<div class="container-fluid pt-5 pb-3" *ngIf="traysAndPens()">
-    <h2 class="section-heading mx-xl-5 mb-4">
-        <i class="fas fa-bowl-food icon-left"></i>
-        <span> Trays And Pens</span>
-    </h2>
-
-    <div class="row px-xl-5">
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12]">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100 zoom-image" src="../../assets/img/about.png" alt="Bowls">
-                    <div class="product-action">
-                        <a class="btn btn-outline-dark" href="#"><i class="fas fa-search-plus"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <p class="p-0 m-0 text-primary">MB 00265</p>
-                    <a class="h6 text-decoration-none text-truncate" href="#">Bowls</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Bowls End -->
-
-
-
-
-
-
-<p *ngIf="categories()"> categories </p>
-<p *ngIf="storage()"> storage</p>
-
-<p *ngIf="petAccessories()"> petAccessories</p>
-
-<p *ngIf="cutlery()"> cutlery</p>
-
-<p *ngIf="servingTools()"> servingTools</p>
-
-<p *ngIf="tongs()"> tongs</p>
-
-<p *ngIf="cruets()"> cruets</p>
-
-<p *ngIf="colandersAndStrainers()"> colandersAndStrainers</p>
-
-<p *ngIf="fruitAndBreadBaskets()"> fruitAndBreadBaskets</p>
-
-<p *ngIf="binsAndBuckets()"> binsAndBuckets</p>
-
-<p *ngIf="barAssortments()"> barAssortments</p>
-
-<p *ngIf="kitchenTool()"> kitchenTool</p>
-
-<p *ngIf="saladServers()"> saladServers</p>
-
-<p *ngIf="utilities()"> utilities</p>

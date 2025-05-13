@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CrudService } from '../service/crud.service';
+import { SharedService } from '../service/shared.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ProductDetailsComponent } from '../product-details/product-details.component';
 
 @Component({
   selector: 'app-products',
@@ -7,15 +11,56 @@ import { Router } from '@angular/router';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
-
-
-  constructor(private _router: Router) { }
+  productList: any
+  imaUrl: any
+  productName: any
+  constructor(
+    private _router: Router,
+    private _sharedRoute: ActivatedRoute,
+    private _crud: CrudService,
+    private _shared: SharedService,
+    private _dialog: MatDialog
+  ) {
+    this._shared.img_url.subscribe(
+      (res: string) => {
+        this.imaUrl = res;
+        console.log(this.imaUrl, 'img');
+      }
+    )
+  }
 
   ngOnInit(): void {
+    this._sharedRoute.paramMap.subscribe(params => {
+      const catId = params.get('id');
+      console.log('Received catId:', catId);
+      this.getProduct(catId);
+    });
+  }
 
+  getProduct(catId: any): void {
+    this._crud.getProducts(catId).subscribe(
+      (res: any) => {
+        console.log('Product list:', res.data);
+        this.productName = res?.data[0]?.pcate_name;
+        this.productList = res.data;
+        console.log(this.productName, 'productName');
+
+      });
   }
 
 
+  openImageDialog(product: any): void {
+    this._dialog.open(ProductDetailsComponent, {
+      data: {
+        imageUrl: product?.imageUrl ? this.imaUrl + product?.imageUrl : '../../assets/img/about.png',
+        productname: product?.productname,
+        productcode: product?.productcode,
+        productsize: product?.productsize,
+        productdesc: product?.productdesc,
+      },
+      panelClass: 'custom-dialog-container'
+    });
+  }
 
   // start product
   categories(): boolean {

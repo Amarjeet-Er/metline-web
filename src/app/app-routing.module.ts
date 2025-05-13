@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'industry-overview', component: AboutUsComponent },
   { path: 'company-profile', component: AboutUsComponent },
   { path: 'categories', component: ProductsComponent },
+  { path: 'product/:id', component: ProductsComponent },
   { path: 'bowls', component: ProductsComponent },
   { path: 'trays-and-pens', component: ProductsComponent },
   { path: 'storage', component: ProductsComponent },

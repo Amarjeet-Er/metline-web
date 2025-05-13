@@ -15,11 +15,18 @@ export class CrudService {
       (data) => {
         this.base_url = data;
         console.log(this.base_url, 'url');
-        
       }
     )
   }
-  get_data() {
-    return this._https.get(`${this.base_url}/api/data`)
+
+  getCategory() {
+    return this._https.get(`${this.base_url}Productcategory`)
+  }
+  getProducts(catId: any) {
+    return this._https.get(`${this.base_url}ProductListByCateId?productCateId=${catId}`)
+  }
+
+  addEnquiry(data: any) {
+    return this._https.post(`${this.base_url}SubmitEnquiry`, data)
   }
 }

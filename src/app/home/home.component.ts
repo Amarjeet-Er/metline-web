@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as AOS from 'aos';
 import { CrudService } from '../service/crud.service';
+import { SharedService } from '../service/shared.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,11 +12,19 @@ import { CrudService } from '../service/crud.service';
 export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
   groupedTestimonials: any = [];
-
+  categoryList: any;
+  imaUrl: any;
   constructor(
-    private _crud: CrudService
+    private _crud: CrudService,
+    private _shared: SharedService,
+    private _router: Router
   ) {
-
+    this._shared.img_url.subscribe(
+      (res: string) => {
+        this.imaUrl = res;
+        console.log(this.imaUrl, 'img');
+      }
+    )
   }
 
 
@@ -27,8 +37,25 @@ export class HomeComponent implements OnInit, AfterViewInit {
       duration: 1000,
       once: true
     });
+
+    this.getCategary();
   }
 
+  getCategary() {
+    this._crud.getCategory().subscribe(
+      (res: any) => {
+        console.log(res, 'category');
+        if (res.status === true) {
+          this.categoryList = res.data.slice(0, 8)
+          console.log(this.categoryList);
+        }
+      });
+  }
+
+  onCat(catId: any) {
+    console.log(catId, 'set id');
+    this._router.navigate(['product', catId?.id]);
+  }
 
   ngAfterViewInit() {
     const videoEl = this.bgVideo.nativeElement;

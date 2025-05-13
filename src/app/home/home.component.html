@@ -140,16 +140,17 @@
 
 
   <div class="row px-xl-5">
-    <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let i of [1,2,3,4,5,6,7,8]">
+    <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let cat of categoryList">
       <div class="product-item bg-light mb-4">
         <div class="product-img position-relative overflow-hidden">
-          <img class="img-fluid w-100 zoom-image" src="../../assets/img/about.png" alt="Bowls">
+          <img class="img-fluid w-100 zoom-image"
+            [src]="cat?.imageUrl ? imaUrl+cat?.imageUrl :   '../../assets/img/about.png'" [alt]="cat?.categoryname">
           <div class="product-action">
-            <a class="btn btn-outline-dark" href="#">View More</a>
+            <a class="btn btn-outline-dark" (click)="onCat(cat)">View More</a>
           </div>
         </div>
         <div class="text-center py-4">
-          <a class="h6 text-decoration-none text-truncate" href="#">Bowls</a>
+          <a class="h6 text-decoration-none text-truncate" href="#">{{cat?.categoryname}}</a>
         </div>
       </div>
     </div>

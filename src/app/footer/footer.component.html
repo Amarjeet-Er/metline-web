@@ -3,7 +3,7 @@
     <div class="row px-xl-5 pt-5">
         <!-- Contact Info -->
         <div class="col-lg-4 col-md-12 mb-5 pr-xl-5">
-            <h5 class="color-custom text-uppercase mb-4">Get In Touch</h5>
+            <h4 class="color-custom text-uppercase mb-4 fw-bold">Get In Touch</h4>
             <p class="mb-4 color-custom">
                 The Company is a manufacturer of Stainless Steel Houseware. The Company manufactures and exports
                 Stainless Steel Utensils, Cutlery, Kitchenware and Household Articles directly or through Merchant
@@ -26,47 +26,30 @@
         <!-- Quick action + Location -->
         <div class="col-lg-8 col-md-12">
             <div class="row">
-                <!-- Quick Shop -->
+                <!-- Quick links -->
                 <div class="col-md-4 mb-5">
-                    <h5 class="color-custom text-uppercase mb-4">Quick Links</h5>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="color-custom mb-2" href="#"><i class="fa fa-angle-right mr-2"></i> &nbsp;Bowls</a>
-                        <a class="color-custom mb-2" href="#"><i class="fa fa-angle-right mr-2"></i> &nbsp;Trays &
-                            Pans</a>
-                        <a class="color-custom mb-2" href="#"><i class="fa fa-angle-right mr-2"></i> &nbsp;Storage</a>
-                        <a class="color-custom mb-2" href="#">
-                            <i class="fa fa-angle-right mr-2"></i> &nbsp;Pet Accessories</a>
-                        <a class="color-custom mb-2" href="#"><i class="fa fa-angle-right mr-2"></i> &nbsp;Cutlery</a>
-                        <a class="color-custom mb-2" href="#"><i class="fa fa-angle-right mr-2">
-                            </i> &nbsp;Serving Tools</a>
-                        <a class="color-custom  mb-2" href="#"><i class="fa fa-angle-right mr-2"></i> &nbsp;Tongs</a>
-                        <a class="color-custom" href="#"><i class="fa fa-angle-right mr-2"></i> &nbsp;Cruets</a>
+                    <h4 class="color-custom text-uppercase mb-4 fw-bold">Quick Links</h4>
+                    <div class="d-flex flex-column justify-content-start" *ngFor="let link of categoryList"
+                        (click)="onCat(link)">
+                        <a class="color-custom mb-2" style="cursor: pointer;">
+                            <i class="fa fa-angle-right mr-2"></i> &nbsp;{{link?.categoryname | titlecase}}
+                        </a>
                     </div>
                 </div>
 
-                <!-- My Account -->
                 <div class="col-md-4 mb-5">
-                    <h5 class="color-custom text-uppercase mb-4">Quick Links</h5>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="color-custom mb-2" href="#"><i class="fa fa-angle-right mr-2">
-                            </i> &nbsp;Colanders & Strainers</a>
-                        <a class="color-custom mb-2" href="#">
-                            <i class="fa fa-angle-right mr-2"></i> &nbsp;Fruit & Bread Baskets</a>
-                        <a class="color-custom mb-2" href="#">
-                            <i class="fa fa-angle-right mr-2"></i> &nbsp;Bins & Buckets</a>
-                        <a class="color-custom mb-2" href="#">
-                            <i class="fa fa-angle-right mr-2"></i> &nbsp;Bar Assortments</a>
-                        <a class="color-custom mb-2" href="#">
-                            <i class="fa fa-angle-right mr-2"></i> &nbsp;Kitchen Tool</a>
-                        <a class="color-custom mb-2" href="#">
-                            <i class="fa fa-angle-right mr-2"></i> &nbsp;Salad Servers</a>
-                        <a class="color-custom" href="#"><i class="fa fa-angle-right mr-2"></i> &nbsp;Utilities</a>
+                    <h4 class="color-custom text-uppercase mb-4 fw-bold">Quick Links</h4>
+                    <div class="d-flex flex-column justify-content-start" *ngFor="let link of categoryList1"
+                        (click)="onCat(link)">
+                        <a class="color-custom mb-2" style="cursor: pointer;">
+                            <i class="fa fa-angle-right mr-2"></i> &nbsp;{{link?.categoryname | titlecase}}
+                        </a>
                     </div>
                 </div>
 
                 <!-- Location Map -->
                 <div class="col-md-4 mb-5">
-                    <h5 class="color-custom text-uppercase mb-4">Locations</h5>
+                    <h4 class="color-custom text-uppercase mb-4 fw-bold">Locations</h4>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d6988.333563608027!2d77.1425781!3d28.8636569!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x390dab932ac60439%3A0x924c1d971f5aceb6!2sMETLINE%20HOUSEWARE%20PLOT%20NO%20238%20HSIIDC%20SEC%2053%20KUNDLI%20INDUSTRIAL%20AREA%20Haryana%20131028!3m2!1d28.8636569!2d77.1425781!5e0!3m2!1sen!2sin!4v1746611642557!5m2!1sen!2sin"
                         width="100%" height="210" style="border:0;" allowfullscreen="" loading="lazy"

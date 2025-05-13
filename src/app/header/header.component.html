@@ -20,25 +20,11 @@
       </div>
     </div>
 
-    <div class="drop-downs">
+    <div class="drop-downs" routerLinkActive="active-link">
       <span>Products</span>
       <div class="drop-down-menu">
-        <ul>
-          <li (click)="bowls()">Bowls</li>
-          <li (click)="traysAndPens()">Trays & Pans</li>
-          <li (click)="storage()">Storage</li>
-          <li (click)="petAccessories()">Pet Accessories</li>
-          <li (click)="cutlery()">Cutlery</li>
-          <li (click)="servingTools()">Serving Tools</li>
-          <li (click)="tongs()">Tongs</li>
-          <li (click)="cruets()">Cruets</li>
-          <li (click)="colandersAndStrainers()">Colanders & Strainers</li>
-          <li (click)="fruitAndBreadBaskets()">Fruit & Bread Baskets</li>
-          <li (click)="binsAndBuckets()">Bins & Buckets</li>
-          <li (click)="barAssortments()">Bar Assortments</li>
-          <li (click)="kitchenTool()">Kitchen Tool</li>
-          <li (click)="saladServers()">Salad Servers</li>
-          <li (click)="utilities()">Utilities</li>
+        <ul *ngFor="let product of categoryList" [routerLink]="['/product', product?.id]">
+          <li routerLinkActive="active-link">{{product?.categoryname | titlecase }}</li>
         </ul>
       </div>
     </div>
@@ -50,41 +36,34 @@
 
   <!-- Mobile Icon Right -->
   <div class="mobile_navigation">
-    <mat-icon (click)="toggleMobileMenu()">menu</mat-icon>
+    <mat-icon (click)="toggleMobileMenu()" *ngIf="!isMobileMenuOpen">menu</mat-icon>
+    <mat-icon (click)="toggleMobileClose()" *ngIf="isMobileMenuOpen">close</mat-icon>
   </div>
 </mat-toolbar>
 
 <!-- Mobile Menu Panel -->
 <div class="mobile_menu" [class.open]="isMobileMenuOpen">
   <ul>
-    <li routerLink="/home">Home</li>
+    <li routerLink="/home" (click)="closeMobileMenu()">Home</li>
+
     <li>
       About Us
       <ul class="sub-menu">
-        <li (click)="industryOverview()">Industry Overview</li>
-        <li (click)="companyProfile()">Company Profile</li>
+        <li (click)="industryOverview(); closeMobileMenu()">Industry Overview</li>
+        <li (click)="companyProfile(); closeMobileMenu()">Company Profile</li>
       </ul>
     </li>
+
     <li>
       Products
       <ul class="sub-menu">
-        <li (click)="bowls()">Bowls</li>
-        <li (click)="traysAndPens()">Trays & Pans</li>
-        <li (click)="storage()">Storage</li>
-        <li (click)="petAccessories()">Pet Accessories</li>
-        <li (click)="cutlery()">Cutlery</li>
-        <li (click)="servingTools()">Serving Tools</li>
-        <li (click)="tongs()">Tongs</li>
-        <li (click)="cruets()">Cruets</li>
-        <li (click)="colandersAndStrainers()">Colanders & Strainers</li>
-        <li (click)="fruitAndBreadBaskets()">Fruit & Bread Baskets</li>
-        <li (click)="binsAndBuckets()">Bins & Buckets</li>
-        <li (click)="barAssortments()">Bar Assortments</li>
-        <li (click)="kitchenTool()">Kitchen Tool</li>
-        <li (click)="saladServers()">Salad Servers</li>
-        <li (click)="utilities()">Utilities</li>
+        <li *ngFor="let product of categoryList" [routerLink]="['/product', product?.id]" routerLinkActive="active-link"
+          (click)="closeMobileMenu()">
+          {{ product?.categoryname | titlecase }}
+        </li>
       </ul>
     </li>
-    <li routerLink="/contact">Contact</li>
+
+    <li routerLink="/contact" (click)="closeMobileMenu()">Contact</li>
   </ul>
 </div>
