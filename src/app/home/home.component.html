@@ -129,34 +129,33 @@
 
 
 
-
-<!-- categories Start -->
+<!-- Categories Start -->
 <div class="container-fluid pt-5 pb-3">
   <div class="d-flex align-items-center mx-xl-5 mb-4">
     <h2 class="mb-0 me-3">Categories</h2>
     <div class="flex-grow-1 border-bottom"></div>
-    <a href="#" class="ms-3 text-primary" routerLink="/categories">View More</a>
   </div>
 
-
   <div class="row px-xl-5">
-    <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let cat of categoryList">
-      <div class="product-item bg-light mb-4">
-        <div class="product-img position-relative overflow-hidden">
-          <img class="img-fluid w-100 zoom-image"
-            [src]="cat?.imageUrl ? imaUrl+cat?.imageUrl :   '../../assets/img/about.png'" [alt]="cat?.categoryname">
-          <div class="product-action">
-            <a class="btn btn-outline-dark" (click)="onCat(cat)">View More</a>
+    <div class="col-lg-3 col-md-4 col-sm-6 pb-4" *ngFor="let cat of categoryList">
+      <div class="product-card">
+        <div class="product-img">
+          <img class="img-fluid" [src]="cat?.imageUrl ? imaUrl + cat?.imageUrl : '../../assets/img/about.png'"
+            [alt]="cat?.categoryname" />
+          <div class="product-overlay" (click)="onCat(cat)">
+            <a class="btn btn-outline-dark btn-glass">View More</a>
           </div>
         </div>
-        <div class="text-center py-4">
-          <a class="h6 text-decoration-none text-truncate" href="#">{{cat?.categoryname}}</a>
+        <div class="product-footer">
+          <div class="text-truncate text-dark fw-bold">
+            {{ cat?.categoryname | titlecase }}
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- Products End -->
+<!-- Categories End -->
 
 
 <!-- why choose Start -->
