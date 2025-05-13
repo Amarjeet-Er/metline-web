@@ -31,11 +31,6 @@ export class HeaderComponent {
       });
   }
 
-  onCat(catId: any) {
-    console.log(catId, 'set id');
-    this._router.navigate(['product', catId?.id]);
-  }
-
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
@@ -43,7 +38,7 @@ export class HeaderComponent {
   closeMobileMenu() {
     this.isMobileMenuOpen = false;
   }
-  
+
   toggleMobileClose() {
     this.isMobileMenuOpen = false;
   }

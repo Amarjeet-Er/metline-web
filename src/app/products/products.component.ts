@@ -14,7 +14,7 @@ export class ProductsComponent {
   productList: any
   imaUrl: any
   productName: any
-  categoryList:any
+  categoryList: any
   constructor(
     private _router: Router,
     private _sharedRoute: ActivatedRoute,
@@ -46,7 +46,6 @@ export class ProductsComponent {
         this.productName = res?.data[0]?.pcate_name;
         this.productList = res.data;
         console.log(this.productName, 'productName');
-
       });
   }
 
@@ -55,7 +54,7 @@ export class ProductsComponent {
       (res: any) => {
         console.log(res, 'category');
         if (res.status === true) {
-          this.categoryList = res.data.slice(0, 8)
+          this.categoryList = res.data
           console.log(this.categoryList);
         }
       });

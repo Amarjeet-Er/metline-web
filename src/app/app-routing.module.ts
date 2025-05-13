@@ -12,22 +12,6 @@ const routes: Routes = [
   { path: 'company-profile', component: AboutUsComponent },
   { path: 'categories', component: ProductsComponent },
   { path: 'product/:id', component: ProductsComponent },
-  { path: 'bowls', component: ProductsComponent },
-  { path: 'trays-and-pens', component: ProductsComponent },
-  { path: 'storage', component: ProductsComponent },
-  { path: 'pet-accessories', component: ProductsComponent },
-  { path: 'cutlery', component: ProductsComponent },
-  { path: 'serving-tools', component: ProductsComponent },
-  { path: 'tongs', component: ProductsComponent },
-  { path: 'cruets', component: ProductsComponent },
-  { path: 'colanders-and-strainers', component: ProductsComponent },
-  { path: 'fruit-and-bread-baskets', component: ProductsComponent },
-  { path: 'bins-and-buckets', component: ProductsComponent },
-  { path: 'bar-assortments', component: ProductsComponent },
-  { path: 'kitchen-tool', component: ProductsComponent },
-  { path: 'salad-servers', component: ProductsComponent },
-  { path: 'utilities', component: ProductsComponent },
-  { path: 'contact', component: ContactUsComponent },
 ]
 
 @NgModule({
