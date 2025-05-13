@@ -14,6 +14,7 @@ export class ProductsComponent {
   productList: any
   imaUrl: any
   productName: any
+  categoryList:any
   constructor(
     private _router: Router,
     private _sharedRoute: ActivatedRoute,
@@ -30,6 +31,7 @@ export class ProductsComponent {
   }
 
   ngOnInit(): void {
+    this.getCategary();
     this._sharedRoute.paramMap.subscribe(params => {
       const catId = params.get('id');
       console.log('Received catId:', catId);
@@ -48,6 +50,21 @@ export class ProductsComponent {
       });
   }
 
+  getCategary() {
+    this._crud.getCategory().subscribe(
+      (res: any) => {
+        console.log(res, 'category');
+        if (res.status === true) {
+          this.categoryList = res.data.slice(0, 8)
+          console.log(this.categoryList);
+        }
+      });
+  }
+
+  onCat(catId: any) {
+    console.log(catId, 'set id');
+    this._router.navigate(['product', catId?.id]);
+  }
 
   openImageDialog(product: any): void {
     this._dialog.open(ProductDetailsComponent, {

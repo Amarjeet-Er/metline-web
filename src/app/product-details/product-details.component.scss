@@ -8,6 +8,8 @@
   margin: auto;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
   animation: zoomIn 0.3s ease-out;
+  height: 95vh;
+  overflow: auto;
 }
 
 .close-btn {

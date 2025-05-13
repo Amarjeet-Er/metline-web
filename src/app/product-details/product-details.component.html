@@ -11,11 +11,11 @@
 
   <!-- Details Section -->
   <div class="product-details">
-    <h5 class="product-name" *ngIf="data?.productname">{{ data?.productname }}</h5>
+    <h5 class="product-name p-0" *ngIf="data?.productname">{{ data?.productname | titlecase }}</h5>
     <div class="product-meta">
-      <p *ngIf="data?.productcode"><strong>Code:</strong> {{ data?.productcode }}</p>
-      <p *ngIf="data?.productsize"><strong>Size:</strong> {{ data?.productsize }}</p>
+      <p class=" p-0 m-0" *ngIf="data?.productcode"><strong>Code:</strong> {{ data?.productcode }}</p>
+      <p class=" p-0 m-0" *ngIf="data?.productsize"><strong>Size:</strong> {{ data?.productsize }}</p>
     </div>
-    <p class="product-desc" *ngIf="data?.productdesc">{{ data?.productdesc }}</p>
+    <p class="product-desc m-0 p-0" *ngIf="data?.productdesc">{{ data?.productdesc }}</p>
   </div>
 </div>

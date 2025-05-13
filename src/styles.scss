@@ -17,14 +17,26 @@
     --secondary-color: #ffc107;
 }
 
+/* For WebKit (Chrome, Safari) */
+.dialog-container::-webkit-scrollbar {
+    width: 0px;
+}
+
 .cdk-overlay-pane {
     margin: 15px 0;
 }
 
 .img-zoom:hover {
-  transform: scale(1.1);
-  transition: transform 0.9s ease;
+    transform: scale(1.1);
+    transition: transform 0.9s ease;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

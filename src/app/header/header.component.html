@@ -21,7 +21,7 @@
     </div>
 
     <div class="drop-downs" routerLinkActive="active-link">
-      <span>Products</span>
+      <span routerLink="/categories">Products</span>
       <div class="drop-down-menu">
         <ul *ngFor="let product of categoryList" [routerLink]="['/product', product?.id]">
           <li routerLinkActive="active-link">{{product?.categoryname | titlecase }}</li>
@@ -55,7 +55,7 @@
     </li>
 
     <li>
-      Products
+     <span routerLink="/categories">Products</span> 
       <ul class="sub-menu">
         <li *ngFor="let product of categoryList" [routerLink]="['/product', product?.id]" routerLinkActive="active-link"
           (click)="closeMobileMenu()">
