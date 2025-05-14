@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.groupedTestimonials.push(this.testimonials.slice(i, i + groupSize));
     }
     AOS.init({
-      duration: 1000,
+      duration: 700,
       once: true
     });
 

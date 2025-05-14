@@ -18,9 +18,10 @@
 }
 
 /* For WebKit (Chrome, Safari) */
-.dialog-container::-webkit-scrollbar {
-    width: 0px;
-}
+// .dialog-container::-webkit-scrollbar {
+//     width: 5px;
+//     background-color: rgb(95, 89, 89);
+// }
 
 .cdk-overlay-pane {
     margin: 15px 0;
