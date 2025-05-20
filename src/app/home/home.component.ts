@@ -106,4 +106,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
   ];
 
+  complianceLogos: string[] = [
+  '../../assets/img/logo-1.jpg',
+  '../../assets/img/logo-2.jpg',
+  '../../assets/img/logo-3.jpg',
+  // '../../assets/img/logo-4.jpg',
+  '../../assets/img/logo-5.jpg',
+];
+
 }

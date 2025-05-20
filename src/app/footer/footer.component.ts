@@ -24,8 +24,8 @@ export class FooterComponent implements OnInit {
       (res: any) => {
         console.log(res, 'category');
         if (res.status === true) {
-          this.categoryList = res.data.slice(0, 8)
-          this.categoryList1 = res.data.slice(8, 20)
+          this.categoryList = res.data.slice(0, 9)
+          this.categoryList1 = res.data.slice(9, 20)
           console.log(this.categoryList);
         }
       });
