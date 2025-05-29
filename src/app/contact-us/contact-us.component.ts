@@ -39,10 +39,11 @@ export class ContactUsComponent implements OnInit {
 
   onSubmit() {
     if (this.enquiry_form.invalid) return;
-
-    const formValues = this.enquiry_form.value;
-
-    this._crud.addEnquiry(formValues).subscribe(
+    let formData = new FormData();
+    for (let key in this.enquiry_form.value) {
+      formData.append(key, this.enquiry_form.value[key]);
+    }
+    this._crud.addEnquiry(formData).subscribe(
       (response) => {
         this.snackBar.open('Enquiry submitted successfully!', 'Close', {
           duration: 4000,
