@@ -1,7 +1,7 @@
 <!-- Background Video -->
 <video #bgVideo autoplay muted loop playsinline preload="auto" width="100%" poster="../../assets/img/fallback.jpg"
   class="w-100 video-animated">
-  <source src="../../assets/img/slide-videos.mp4" type="video/mp4" />
+  <source src="../../assets/img/video-banner.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
 
@@ -16,18 +16,18 @@
       <div class="col-lg-6" data-aos="fade-right">
         <h2 class="fw-bold text-primary mb-4">About Us</h2>
         <p class="mb-3">
-          We is a manufacturer of Stainless Steel Houseware. We manufactures and exports Stainless
-          Steel Utensils, Cutlery, Kitchenware and Household Articles directly or through Merchant Export Trading
-          Companies. The promoters of Metline Houseware. have a cumulative work-experience of many decades in the
-          stainless steel industry. Their acquaintance with all procedures involved in production has been set in motion
-          at the state of the art two manufacturing facilities, both in Kundli Industrial Area on the outskirts of Delhi.
+          We are the manufacturer of stainless steel houseware. We manufacture and export stainless steel utensils,
+          cutlery, kitchenware, and household articles directly or through merchant export trading companies. The
+          promoters of Metline Houseware have a cumulative work experience of many decades in the stainless steel
+          industry. Their acquaintance with all procedures involved in production has been set in motion at the
+          state-of-the-art two manufacturing facilities, both in Kundli Industrial Area on the outskirts of Delhi.
         </p>
         <p class="mb-4">
-          We has a wide range and ability to produce around 200 different products backed by in-house designing
-          We is capable of producing steel houseware of any shape like round, oval, square or any other shape.
-          All processes, sheet cutting mould making, pressing, spinning, welding, polishing and packing are done under
-          one roof. A highly skilled labour force ensures that We has happy and satisfied customers in E.U,
-          U.S.A, U.K., South America, Japan and many other countries.
+          We have a wide range and the ability to produce around 200 different products backed by in-house designing. We
+          are capable of producing steel houseware of any shape like round, oval, square, or any other shape. All
+          processes—sheet cutting, mould making, pressing, spinning, welding, polishing, and packing—are done under one
+          roof. A highly skilled labour force ensures that we have happy and satisfied customers in the E.U., U.S.A.,
+          U.K., South America, Japan, and many other countries.
         </p>
         <a href="#" class="btn btn-primary" routerLink="/company-profile">View More</a>
       </div>
@@ -42,6 +42,11 @@
   </div>
 </section>
 <!-- About Section End -->
+
+
+
+
+
 
 
 
@@ -128,6 +133,17 @@
 </section>
 
 
+<div class="container py-4 mb-3">
+  <h2 class="custom-heading mx-xl-5 mb-5 text-center text-primary">
+    <span>Compliance logo’s</span>
+  </h2>
+  <div class="row justify-content-center text-center g-3">
+    <div class="col-6 col-sm-4 col-md-3 img-zoom" *ngFor="let logo of complianceLogos">
+      <img [src]="logo" class="compliance-logo img-fluid" alt="Compliance Logo" />
+    </div>
+  </div>
+</div>
+
 
 <!-- Categories Start -->
 <div class="container-fluid pt-5 pb-3">
@@ -200,48 +216,6 @@
 
 
 
-<!-- Our Team start -->
-<div class="container py-5">
-  <h2 class="mb-0 me-3 py-5 text-center text-primary">Our Team</h2>
-  <div class="row justify-content-center">
-    <div class="col-md-3 mb-5" *ngFor="let item of [1,2,3,4]">
-      <div class="card shadow-lg profile-card">
-        <!-- Profile Image -->
-        <img src="../../assets/img/about.png" alt="Team Member" class="card-img-top rounded-circle mx-auto mt-4"
-          style="width: 150px; height: 150px; object-fit: cover;">
-
-        <!-- Card Body -->
-        <div class="card-body text-center">
-          <h5 class="card-title text-primary">Mohan Doe</h5>
-          <p class="card-text text-muted">Frontend Developer</p>
-
-          <!-- Social Media Icons (Initially hidden, shown on hover) -->
-          <div class="social-icons mt-3">
-            <a href="https://facebook.com" target="_blank" class="text-primary mx-2"><i
-                class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" target="_blank" class="text-info mx-2"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="text-primary mx-2"><i
-                class="fab fa-linkedin-in"></i></a>
-            <a href="https://instagram.com" target="_blank" class="text-danger mx-2"><i
-                class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Our Team end -->
-
-<div class="container py-4 mb-3">
-  <h2 class="custom-heading mx-xl-5 mb-5 text-center text-primary">
-    <span>Compliance logo’s</span>
-  </h2>
-  <div class="row justify-content-center text-center g-3">
-    <div class="col-6 col-sm-4 col-md-3 img-zoom" *ngFor="let logo of complianceLogos">
-      <img [src]="logo" class="compliance-logo img-fluid" alt="Compliance Logo" />
-    </div>
-  </div>
-</div>
 
 <!-- Testimonials start -->
 <div id="testimonialCarousel" class="carousel slide container" data-bs-ride="carousel">
