@@ -11,12 +11,12 @@
   .logo {
     display: flex;
     align-items: center;
-
-    img {
-      height: 60px;
-      border-radius: 5px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
+    margin-left: -50px;
+    // img {
+    //   height: 60px;
+    //   border-radius: 5px;
+    //   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    // }
   }
 
   .menu_links {
@@ -32,7 +32,7 @@
       align-items: center;
 
       span {
-        color: #fff;
+        color: #000;
         font-size: 16px;
         padding: 10px 0;
       }
@@ -64,7 +64,7 @@
 
             &:hover {
               background-color: var(--primary-color);
-              color: #fff;
+              color: #da6a0f;
             }
           }
         }
@@ -83,7 +83,7 @@
 
     mat-icon {
       font-size: 28px;
-      color: #fff;
+      color: #000;
     }
   }
 }
@@ -137,6 +137,10 @@
 @media (max-width: 768px) {
   .main-toolbar {
     padding: 0 20px;
+  }
+
+  .logo {
+    margin-left: 0px !important;
   }
 }
 
