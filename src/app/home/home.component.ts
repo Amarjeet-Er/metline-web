@@ -72,46 +72,45 @@ export class HomeComponent implements OnInit, AfterViewInit {
       name: 'John Doe',
       role: 'Engineer',
       message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
-      avatar: '../../assets/img/about.png'
+      avatar: '../../assets/img/profile.jpg'
     },
     {
       name: 'Sukesh Doe',
       role: 'Angular Developer',
       message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
-      avatar: '../../assets/img/about.png'
+      avatar: '../../assets/img/profile.jpg'
     },
     {
       name: 'Jane Smith',
       role: 'Designer',
       message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
-      avatar: '../../assets/img/about.png'
+      avatar: '../../assets/img/profile.jpg'
     },
     {
       name: 'Mike Lee',
       role: 'Project Manager',
       message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
-      avatar: '../../assets/img/about.png'
+      avatar: '../../assets/img/profile.jpg'
     },
     {
       name: 'Dinesh Ray',
       role: 'Manager',
       message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
-      avatar: '../../assets/img/about.png'
+      avatar: '../../assets/img/profile.jpg'
     },
     {
       name: 'Chunchun Pandit',
       role: 'Dot Net Developer',
       message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
-      avatar: '../../assets/img/about.png'
+      avatar: '../../assets/img/profile.jpg'
     }
   ];
 
   complianceLogos: string[] = [
-  '../../assets/img/logo-1.jpg',
-  '../../assets/img/logo-2.jpg',
-  '../../assets/img/logo-3.jpg',
-  // '../../assets/img/logo-4.jpg',
-  '../../assets/img/logo-5.jpg',
+  '../../assets/img/ISO-9001.png',
+  '../../assets/img/ISO-14001.png',
+  '../../assets/img/BSCI.jpg',
+  '../../assets/img/sedex.jpg',
 ];
 
 }
