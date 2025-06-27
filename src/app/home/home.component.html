@@ -215,44 +215,24 @@
 
 
 
-<!-- Testimonials start -->
-<div id="testimonialCarousel" class="carousel slide container" data-bs-ride="carousel">
-  <h2 class="custom-heading mx-xl-5 mb-4 text-center text-primary">
-    <span>Testimonials </span>
+<!-- Responsive Testimonials (no carousel) -->
+<div class="testimonials container py-5">
+  <h2 class="custom-heading mb-4 text-center text-primary">
+    <span>Testimonials</span>
   </h2>
-  <div class="carousel-inner py-5">
-    <div class="carousel-item" *ngFor="let group of groupedTestimonials; let i = index" [class.active]="i === 0">
-      <div class="row">
-        <div class="col-md-4" *ngFor="let t of group">
-          <div class="card mb-4 shadow-lg border-0">
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-3">
-                <img [src]="t.avatar" class="rounded-circle me-3" width="60" height="60" alt="User">
-                <div>
-                  <h3 class="mb-0 fw-bold">{{ t.name }}</h3>
-                  <small class="text-muted">{{ t.role }}</small>
-                </div>
-              </div>
-              <p class="text-muted">“{{ t.message }}”</p>
-            </div>
+
+  <div class="row justify-content-center g-4">
+    <!-- 1-up (<768) | 2-up (≥768) | 3-up (≥992) -->
+    <div class="col-lg-4 col-md-6" *ngFor="let t of testimonials">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <img [src]="t.avatar" class="rounded-circle me-3" width="60" height="60" [alt]="t.name" />
+            <h3 class="h6 fw-bold mb-0">{{ t.name }}</h3>
           </div>
+          <p class="mb-0 text-muted">{{ t.message }}</p>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Carousel Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-    <span aria-hidden="true">
-      <i class="bi bi-chevron-left fs-1 text-dark"></i>
-    </span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-    <span aria-hidden="true">
-      <i class="bi bi-chevron-right fs-1 text-dark"></i>
-    </span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
-<!-- Testimonials end -->

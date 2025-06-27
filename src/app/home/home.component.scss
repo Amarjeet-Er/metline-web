@@ -148,3 +148,29 @@
     padding: 8px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
+
+
+
+/* outer wrapper */
+.testimonials {
+
+    /* underline in heading */
+    .custom-heading span {
+        border-bottom: 3px solid currentColor;
+        padding-bottom: 0.25rem;
+    }
+
+    /* cards */
+    .card {
+        transition: transform 0.3s ease;
+        .card-body{
+            border-radius: 10px;
+           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+    }
+}
