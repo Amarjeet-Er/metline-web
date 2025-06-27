@@ -6,8 +6,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class SharedService {
 
-  base_url = new BehaviorSubject<string>('https://www.metlinehouseware.com/Api/');
-  img_url = new BehaviorSubject<string>('https://www.metlinehouseware.com/');
+  base_url = new BehaviorSubject<string>('https://metlinehouseware.com/Api/');
+  img_url = new BehaviorSubject<string>('https://metlinehouseware.com/');
   constructor() {
     
    }

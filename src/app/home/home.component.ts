@@ -70,41 +70,26 @@ export class HomeComponent implements OnInit, AfterViewInit {
   testimonials = [
     {
       name: 'John Doe',
-      message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
+      message: `${"The structural steel provided by Metline Houseware  exceeded our expectations in terms of quality and compliance. Every shipment arrived on time, and the documentation was always in perfect order, which is crucial for our cross-border projects."}`,
       avatar: '../../assets/img/profile.jpg'
     },
     {
       name: 'Sukesh Doe',
-      message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
+      message: `${"Reliable, professional, and competitively priced – Metline Houseware has been a trusted partner in our projects across Asia and Europe. Their team understands the complexities of exporting and always delivers hassle-free service."}`,
       avatar: '../../assets/img/profile.jpg'
     },
     {
       name: 'Jane Smith',
-      message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
+      message: `${"We've been sourcing steel utensils  from Metline Houseware for over three years, and their consistency in quality and timely delivery has made them a critical part of our supply chain. Their customer service team is responsive and proactive, making international procurement feel seamless."}`,
       avatar: '../../assets/img/profile.jpg'
     },
-    {
-      name: 'Mike Lee',
-      message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
-      avatar: '../../assets/img/profile.jpg'
-    },
-    {
-      name: 'Dinesh Ray',
-      message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
-      avatar: '../../assets/img/profile.jpg'
-    },
-    {
-      name: 'Chunchun Pandit',
-      message: 'The company has a wide range and ability to produce around 200 different products backed by in-house designing. The company is capable of producing steel houseware of any shape like round, oval, square, or any other shape.',
-      avatar: '../../assets/img/profile.jpg'
-    }
   ];
 
   complianceLogos: string[] = [
-  '../../assets/img/ISO-9001.png',
-  '../../assets/img/ISO-14001.png',
-  '../../assets/img/BSCI.jpg',
-  '../../assets/img/sedex.jpg',
-];
+    '../../assets/img/ISO-9001.png',
+    '../../assets/img/ISO-14001.png',
+    '../../assets/img/BSCI.jpg',
+    '../../assets/img/sedex.jpg',
+  ];
 
 }
